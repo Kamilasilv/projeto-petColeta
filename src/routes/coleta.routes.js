@@ -12,6 +12,6 @@ router.get("/:id", controller.getById)
 router.delete(":id/delete", controller.deleteColeta)
 
 //atualizar um ponto de coleta por id(validação)
-router.patch("/atualizar/:id", controller.atualizaColeta)
+router.put("/atualizar/:id", controller.atualizaColeta)
 
 module.exports = router
