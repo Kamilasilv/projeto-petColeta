@@ -1,9 +1,9 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 
-      const connect = () => {mongoose.connect(
-        //   'mongodb://localhost:27017/coletas',{
-     process.env.DATABASE_URL, {
+const MONGODB_URL = process.env.MONGO_URI 
+
+const connect = () => {mongoose.connect(MONGODB_URL || process.env.DATABASE_URL , {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
