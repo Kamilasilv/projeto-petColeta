@@ -10,6 +10,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+const index = require("../src/routes/index");
+app.use("/",index )
+
 const coletaRoutes = require("../src/routes/coleta.routes")
 app.use("/coletas",coletaRoutes)
 
