@@ -8,8 +8,13 @@ const connect = () => {mongoose.connect(MONGODB_URL || process.env.DATABASE_URL 
         useUnifiedTopology: true
     })
 
-    .then(console.log("Database conectada com sucesso."))
-    .catch(err => console.err)
+    .then(()=>{
+      console.log("Conectado no MongoDb Atlas")
+    })
+    .catch((error) => {
+      console.log("Algo deu errado")
+      console.error(error)
+    })
 }
 
 module.exports = {connect}
