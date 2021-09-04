@@ -3,20 +3,20 @@ const mongoose = require('mongoose')
 const coletaSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     nome: {
-        type:String,
-        required:true
+        type: String,
+        required: true
     },
     local: {
-        type:String,
-        required:true
+        type: String,
+        required: true
     },
-    horárioFuncionamento: {
-        type:String,
-        required:true
+    horarioFuncionamento: {
+        type: String,
+        required: true
     },
     criadoEm: {
         type: Date,
-        required:true,
+        required: true,
         default:new Date
     }
 })

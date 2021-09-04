@@ -1,8 +1,0 @@
-- decidir se o projeto/rotas vai ser em inglês- atualizar
-- fazer a conexão com o mongodb;
--estruturar as lógicas no controller;
-- popular a collection; 
-- começar a criação/testes no postman; dos individuos/cadastro
-- reassistir aula de autenticação;
--aplicar autenticação nas rotas especificadas;
-

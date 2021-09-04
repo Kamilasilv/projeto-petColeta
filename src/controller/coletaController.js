@@ -1,0 +1,82 @@
+const mongoose = require('mongoose')
+const Collect = require('../models/coleta')
+
+const getAllCollections = async (req, res) => { 
+    const collections = await Collect.find()
+    res.status(200).send(collections)
+}
+
+const collectById = async (req,res) => { 
+    const idCollect = await Collect.findById(req.params.id)
+    Collect.findOne({ id: req.params.id}, (err, collection) => {
+    if(err) {
+            res.status(404).send({ message: err.message})
+        }
+            if(collection){
+                res.status(200).send(idCollect)
+            }
+    else{
+        res.status(404).send("collect not found! ")
+        }
+    })
+}
+
+const createCollectionPoint = async (req,res) => { 
+    const collection = await new Collect ({
+        _id: new mongoose.Types.ObjectId(),
+        nome: req.body.nome,
+        local: req.body.local,
+        horarioFuncionamento:req.body.horarioFuncionamento,
+        criadoEm: req.body.criadoEm
+    })
+
+    const {nome }  = req.body
+    const collectionExists = await Collect.findOne({nome})
+    if(collectionExists){
+        return res.status(409).send({ error: "Collection point already exists."})
+    }
+    try{
+        const newCollectionPoint = await collection.save()
+        res.status(200).send(newCollectionPoint)
+    } catch (err) {
+        res.status(404).send({ "message": err.message})
+    }
+}
+
+const deleteCollectionPoint = async (req,res) => { //concluir e testar
+    const idCollect = req.params.id
+
+    const validCollection = await Collect.findOne({ _id:idCollect})
+    if(!idCollect){
+        res.status(404).send({ "message": "Invalid collection point id."})
+    }
+    else{
+        try{ 
+            Collect.deleteOne({ id:idCollect}, function (err) {
+                if(!err){
+                    res.status(200).send({ "message": "Collection point successfully deleted"})
+                } else{
+                    res.status(500).send({ "message": err.message })
+                }
+            })
+
+        } catch{
+            res.status(500).send({ "message": err.message })
+        }
+    }
+}
+
+const updateCollectionPoint = async (req,res) => { //completar e testar
+    const idCollect = req.params.id
+    const collection = req.body.nome
+try{
+    const updateCollect = await Collect.findById({ _id: req.params.id })
+    if(idCollect == null){
+        res.status(404).send({ "message": "Collection point not found"})
+    } 
+} catch{
+
+}
+}
+
+module.exports = { getAllCollections, collectById,createCollectionPoint, deleteCollectionPoint, updateCollectionPoint }
