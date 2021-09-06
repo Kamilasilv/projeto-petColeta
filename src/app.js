@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 const index = require("../src/routes/index");
 const coletaRoutes = require("../src/routes/coleta.routes")
-const pessoasRoutes = require("../src/routes/pessoas.routes")
+const usuariosRoutes = require("../src/routes/usuarios.routes")
 
 
 const db = require("../src/data/database")
@@ -17,6 +17,6 @@ app.use(express.json())
 
 app.use("/",index )
 app.use("/coletas",coletaRoutes)
-app.use("/pessoas",pessoasRoutes)
+app.use("/usuarios",usuariosRoutes)
 
 module.exports = app
