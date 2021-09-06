@@ -16,7 +16,7 @@ const collectById = async (req,res) => {
                 res.status(200).send(idCollect)
             }
     else{
-        res.status(404).send("collect not found! ")
+        res.status(404).send("Collect not found! ")
         }
     })
 }
@@ -39,11 +39,11 @@ const createCollectionPoint = async (req,res) => {
         const newCollectionPoint = await collection.save()
         res.status(200).send(newCollectionPoint)
     } catch (err) {
-        res.status(404).send({ "message": err.message})
+        res.status(500).send({ "message": err.message})
     }
 }
 
-const deleteCollectionPoint = async (req,res) => { //concluir e testar
+const deleteCollectionPoint = async (req,res) => { 
     const idCollect = req.params.id
 
     const validCollection = await Collect.findOne({ _id:idCollect})
@@ -67,16 +67,32 @@ const deleteCollectionPoint = async (req,res) => { //concluir e testar
 }
 
 const updateCollectionPoint = async (req,res) => { //completar e testar
-    const idCollect = req.params.id
-    const collection = req.body.nome
-try{
-    const updateCollect = await Collect.findById({ _id: req.params.id })
-    if(idCollect == null){
-        res.status(404).send({ "message": "Collection point not found"})
-    } 
-} catch{
-
+  try {
+     const collection = await Collect.findById({ _id: req.params.id})
+        if(collection == null){
+        res.status(404).send({ "message": "Collection not found!"})
+    }
+    if(req.body.nome != null){
+        collection.nome = req.body.nome
+    }
+    if(req.body.local){
+        collection.local = req.body.local
+    }
+    if(req.body.horarioFuncionamento){
+        collection.horarioFuncionamento = req.body.horarioFuncionamento
+    }
+    const updatedCollection = await collection.save()
+    res.status(200).send(updatedCollection)
+ }
+ catch (err){
+    res.status(500).send({ "message": err.message })
+ }
 }
-}
 
-module.exports = { getAllCollections, collectById,createCollectionPoint, deleteCollectionPoint, updateCollectionPoint }
+module.exports = { 
+    getAllCollections, 
+    collectById,
+    createCollectionPoint,
+    deleteCollectionPoint, 
+    updateCollectionPoint
+ }
