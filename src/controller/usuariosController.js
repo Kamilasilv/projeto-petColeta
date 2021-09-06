@@ -60,10 +60,20 @@ const updateName = async (req, res) =>{
     if(usuario == null){
         res.status(404).send({ "message": "Person not found."})
     }
-
-    } catch{
-
+    if(req.body.nome){
+        usuario.nome = req.body.nome
+    }
+    const usernameUpdate = await usuario.save()
+    res.status(200).send(usernameUpdate)
+    } 
+    catch (err){
+        res.status(500).send({ "message": err.message})
     }
 }
 
-module.exports = { getAllPeople,createRegistration, deletePeople,updateName}
+module.exports = { 
+    getAllPeople,
+    createRegistration,
+    deletePeople,
+    updateName
+}
