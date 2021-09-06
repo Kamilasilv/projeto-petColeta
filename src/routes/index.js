@@ -1,9 +1,12 @@
 const express = require ('express')
 const router = express.Router();
 
-
-router.get("/oi", (req, resp)=>{
-    resp.status(200).send({"mensagem":"oi to aqui ta funcionando "})
+router.get("/", (req, res)=>{
+    res.status(200).send({
+        "mensagem": "Bem vindo ao Projeto Pet-Coleta",
+        "title":  "Pet-Coleta",
+        "version": "1.0.0"
+    })
 })
 
 module.exports = router
