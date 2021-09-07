@@ -8,7 +8,7 @@ const getAllPeople = async (req, res) => {
 
 const getAllDerby = async (req, res) => {
     const usuarios = await Usuarios.find().populate("coleta")
-    const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == "Pet-coleta Diário")
+    const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == "Pet-coleta Derby")
     res.status(200).json(filteredUser)
 }
 
