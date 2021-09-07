@@ -47,12 +47,12 @@ const deleteCollectionPoint = async (req,res) => {
     const idCollect = req.params.id
 
     const validCollection = await Collect.findOne({ _id:idCollect})
-    if(!idCollect){
+    if(!validCollection){
         res.status(404).send({ "message": "Invalid collection point id."})
     }
     else{
         try{ 
-            Collect.deleteOne({ id:idCollect}, function (err) {
+            Collect.deleteOne({ _id:idCollect}, function (err) {
                 if(!err){
                     res.status(200).send({ "message": "Collection point successfully deleted"})
                 } else{
