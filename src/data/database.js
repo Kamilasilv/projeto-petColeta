@@ -1,4 +1,5 @@
 require('dotenv').config()
+require('dotenv-safe').config()
 const mongoose = require('mongoose')
 
 const MONGODB_URL = process.env.MONGODB_URI  || process.env.DATABASE_URL

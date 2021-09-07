@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 const Collect = require('../models/coleta')
+const jwt = require('jsonwebtoken')
+const SECRET = process.env.SECRET
 
 const getAllCollections = async (req, res) => { 
     const collections = await Collect.find()
@@ -22,6 +24,18 @@ const collectById = async (req,res) => {
 }
 
 const createCollectionPoint = async (req,res) => { 
+    const authHeader = req.get("autorizathion")
+    const token = authHeader.split(' ')[1]
+
+    if(!token){
+        return res.status(403).send({ message: "Authorization token required!"})
+    }
+    jwt.verify(token, SECRET, async (err) => {
+        if (err){
+            res.status(403).send({ message: "Invalid token"})
+        }
+    })
+
     const collection = await new Collect ({
         _id: new mongoose.Types.ObjectId(),
         nome: req.body.nome,
