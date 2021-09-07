@@ -6,6 +6,12 @@ const getAllPeople = async (req, res) => {
     res.status(200).send(usuario)
 }
 
+const getAllDerby = async (req, res) => {
+    const usuarios = await Usuarios.find().populate("coleta")
+    const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == "Pet-coleta Diário")
+    res.status(200).json(filteredUser)
+}
+
 const createRegistration = async (req, res) => {
     const usuario =  new Usuarios ({
         _id: new mongoose.Types.ObjectId,
@@ -73,6 +79,7 @@ const updateName = async (req, res) =>{
 
 module.exports = { 
     getAllPeople,
+    getAllDerby,
     createRegistration,
     deletePeople,
     updateName

@@ -4,6 +4,8 @@ const controller = require("../controller/usuariosController")
 
 router.get("/todos", controller.getAllPeople)
 
+router.get("/derbyColeta", controller.getAllDerby)
+
  router.post("/cadastroColeta", controller.createRegistration)
 
  router.delete("/deletar/:id", controller.deletePeople)
