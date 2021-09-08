@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 const Usuarios = require("../models/usuarios")
 
 const getAllPeople = async (req, res) => {
-    const usuario = await Usuarios.find().populate("coleta")
-    res.status(200).send(usuario)
+    const usuarios = await Usuarios.find().populate("coleta")
+    res.status(200).send(usuarios)
 }
 
 const getAllDerby = async (req, res) => {
