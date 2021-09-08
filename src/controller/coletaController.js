@@ -24,7 +24,7 @@ const collectById = async (req,res) => {
 }
 
 const createCollectionPoint = async (req,res) => { 
-    const authHeader = req.get("autorizathion")
+    const authHeader = req.get('autorization')
     const token = authHeader.split(' ')[1]
 
     if(!token){
