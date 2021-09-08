@@ -19,15 +19,15 @@ const createAdm = async (req, res) => {
   const loginAdm = (req, res) => {
     Adm.findOne({ email: req.body.email }, (err, adminFound) => {
       if (!adminFound) {
-        return res.status(404).send({ message: 'admin not found', email: '${req.body.email}' })
+        return res.status(404).send({ message: 'Admin not found', email: `${req.body.email}` })
       }
       const senhaValida = bcrypt.compareSync(req.body.senha, adminFound.senha)
   
       if (!senhaValida) {
-        return res.status(401).send({ message: 'login not authorized' })
+        return res.status(401).send({ message: "Login not authorized" })
       }
       const token = jwt.sign({ email: req.body.email }, SECRET)
-      res.status(200).send({ message: 'Login successfully', token: token })
+      res.status(200).send({ message: "Login successfully", token: token })
     })
   }
 
