@@ -47,60 +47,32 @@ Esta API está sendo executada na `porta 8080` e para que todas as rotas possam 
 
   
 | **_{GET}_** | Retorna |
-
 | ------------------- | :-------------------: |
-
 | /coletas/todos | Lista todos os pontos de coleta existentes.|
-
 | /coletas/:id | Lista o ponto de coleta do id requisitado. |
-
 | /usuarios/todos/ | Lista todos os usuários cadastrados no projeto.
-
 | /usuarios/:id | Lista as informações do usuário requisitado através do id. |
 
-
-
 | **_{POST}_** | Retorna |
-
 | ------------------- | :-------------------: |
-
 | /coletas/create | Recebe um novo ponto de Coleta, adiciona ao banco e retorna o que foi criado |
-
 | /usuarios/cadastroColeta | Recebe um novo usuário em um ponto de coleta existente |
-
 | /adm/criar | Recebe um novo usuário administrador |
-
 | /adm/login | Faz login do usuário cadastrado |
 
-
-  
-
 | **_{PATCH}_** | Retorna |
-
 | ------------------- | :-------------------: |
-
 | /usuarios/atualizarnome/:id | Atualiza o parâmetro nome do usuário e retorna o item atualizado |
 
-  
-
 | **_{PUT}_** | Retorna |
-
 | ------------------- | :-------------------: |
-
 | /coletas/atualizar/:id | Atualiza qualquer parâmetro do ponto de Coleta e retorna o item atualizado |
-
 | /usuarios/atualizar/:id | Atualiza qualquer parâmetro do usuário cadastrado e retorna o item atualizado |
 
-
-
 | **_{DELETE}_** | Retorna |
-
 | ------------------- | :-------------------: |
-
 | /coletas/delete/:id | Deletar um ponto de coleta (necessita autenticação) |
-
 | /usuarios/deletar/:id | Deleta um usuário cadastrado através do seu id |
-
 
 ## Demandas de negócio
 
