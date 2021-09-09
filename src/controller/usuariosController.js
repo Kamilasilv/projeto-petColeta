@@ -82,8 +82,9 @@ const updateName = async (req, res) =>{
 }
 
 const updateAnything = async (req, res) => {
+    const userId = req.params.id
     try {
-        const usuario = await Collect.findById({ _id: req.params.id})
+        const usuario = await Collect.findById(userId)
         if(usuario == null){
             return res.status.send({ message: "User not foud. "})
         }
