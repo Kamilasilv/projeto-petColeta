@@ -81,10 +81,29 @@ const updateName = async (req, res) =>{
     }
 }
 
+const updateAnything = async (req, res) => {
+    try {
+        const usuario = await Collect.findById({ _id: req.params.id})
+        if(usuario == null){
+            return res.status.send({ message: "User not foud. "})
+        }
+        const updatedUser = req.body
+        if(updatedUser != null){
+            const updatedUser = await usuario.save()
+            res.status(200).send(updatedUser)
+        }
+    }
+    catch (err){
+       res.status(500).send({ "message": err.message })
+    }
+   }
+   
+
 module.exports = { 
     getAllPeople,
     getAllCollect,
     createRegistration,
     deletePeople,
-    updateName
+    updateName,
+    updateAnything
 }
