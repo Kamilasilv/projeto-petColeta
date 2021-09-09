@@ -90,16 +90,15 @@ const updateAnything = async (req, res) => {
     if(req.body.nome != null){
         usuario.nome = req.body.nome
     }
-    if(req.body.endereço){
+    if(req.body.endereço != null){
         usuario.endereço = req.body.endereço
     }
-    if(req.body.telefone){
+    if(req.body.telefone != null){
         usuario.telefone = req.body.telefone
     }
-    if(req.body.pet){
+    if(req.body.pet != null){
         usuario.pet = req.body.pet
     }
-    
     const updatedUser = await usuario.save()
        res.status(200).send(updatedUser)
     }
