@@ -85,7 +85,7 @@ const updateAnything = async (req, res) => {
     const userId = req.params.id
     const updatedUser = req.body;
 
-    Usuarios.findByIdAndUpdate(userId, updatedUser, (err, usuario) => {
+    Usuarios.findById(userId, updatedUser, (err, usuario) => {
     if (err) {
       return res.status(424).send({ message: err.message });
     } else if (usuario) {
