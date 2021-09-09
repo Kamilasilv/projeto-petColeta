@@ -4,7 +4,7 @@ const controller = require("../controller/usuariosController")
 
 router.get("/todos", controller.getAllPeople)
 
-router.get("/derbyColeta", controller.getAllDerby)
+router.get("/coleta", controller.getAllCollect)
 
  router.post("/cadastroColeta", controller.createRegistration)
 

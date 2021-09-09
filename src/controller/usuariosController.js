@@ -6,7 +6,7 @@ const getAllPeople = async (req, res) => {
     res.status(200).send(usuarios)
 }
 
-const getAllDerby = async (req, res) => {
+const getAllCollect = async (req, res) => {
     const usuarios = await Usuarios.find()
     const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == "Pet-coleta Derby").populate('coleta')
     res.status(200).json(filteredUser)
@@ -81,7 +81,7 @@ const updateName = async (req, res) =>{
 
 module.exports = { 
     getAllPeople,
-    getAllDerby,
+    getAllCollect,
     createRegistration,
     deletePeople,
     updateName
