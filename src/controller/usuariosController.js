@@ -83,21 +83,17 @@ const updateName = async (req, res) =>{
 
 const updateAnything = async (req, res) => {
     const userId = req.params.id
-    try {
-        const usuario = await Collect.findById(userId)
-        if(usuario == null){
-            return res.status.send({ message: "User not foud. "})
-        }
-        const updatedUser = req.body
-        if(updatedUser != null){
-            const updatedUser = await usuario.save()
-            res.status(200).send(updatedUser)
-        }
+    const updatedUser = req.body;
+
+    Usuarios.findByIdAndUpdate(userId, updatedUser, (err, usuario) => {
+    if (err) {
+      return res.status(424).send({ message: err.message });
+    } else if (usuario) {
+      return res.status(200).send("Updated successfully!");
     }
-    catch (err){
-       res.status(500).send({ "message": err.message })
-    }
-   }
+    res.status(404).send("User not found!");
+  });
+}
    
 
 module.exports = { 
