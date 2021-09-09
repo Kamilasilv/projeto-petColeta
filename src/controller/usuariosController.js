@@ -66,8 +66,8 @@ const deletePeople = async (req, res) => {
 
 const updateName = async (req, res) =>{
     try{
-    const usuario = await Usuarios.findById({ _id:req.params.id})
-    if(usuario == null){
+    const usuario = await Usuarios.findById({ _id: req.params.id})
+        if(usuario == null){
         res.status(404).send({ "message": "Person not found."})
     }
     if(req.body.nome){
@@ -83,31 +83,29 @@ const updateName = async (req, res) =>{
 
 const updateAnything = async (req, res) => {
     try {
-        const usuario = await Usuarios.findById({ _id: req.params.id})
-           if(usuario == null){
-           res.status(404).send({ "message": "Usuario not found!"})
-       }
-       if(req.body.nome != null){
-           usuario.nome = req.body.nome
-       }
-       if(req.body.endereço){
-           usuario.endereço = req.body.endereço
-       }
-       if(req.body.telefone){
-           usuario.telefone = req.body.telefone
-       }
-       if(req.body.pet){
-           usuario.pet = req.body.pet
-       }
-       if(req.body.pontodeColeta){
-           usuario.pontodeColeta = req.body.pontodeColeta
-       }
-       const updatedUser = await usuario.save()
+     const usuario = await Usuarios.findById({ _id: req.params.id})
+        if(usuario == null){
+        res.status(404).send({ "message": "Usuario not found!"})
+    }
+    if(req.body.nome != null){
+        usuario.nome = req.body.nome
+    }
+    if(req.body.endereço){
+        usuario.endereço = req.body.endereço
+    }
+    if(req.body.telefone){
+        usuario.telefone = req.body.telefone
+    }
+    if(req.body.pet){
+        usuario.pet = req.body.pet
+    }
+    
+    const updatedUser = await usuario.save()
        res.status(200).send(updatedUser)
     }
     catch (err){
        res.status(500).send({ "message": err.message })
-    }
+ }
 }
    
 
