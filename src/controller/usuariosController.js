@@ -49,7 +49,7 @@ const deletePeople = async (req, res) => {
     }
     else{
         try{
-            Usuarios.deleteOne({ id:idPeople}, function (err) {
+            Usuarios.deleteOne({ _id:idPeople}, function (err) {
                  if(!err){
                     res.status(200).send({ "message": "Person  successfully deleted"})
                 } else{
