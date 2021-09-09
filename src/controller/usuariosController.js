@@ -66,7 +66,7 @@ const deletePeople = async (req, res) => {
 
 const updateName = async (req, res) =>{
     try{
-    const usuario = await Usuarios.findById(req.params.id)
+    const usuario = await Usuarios.findById({ _id:req.params.id})
     if(usuario == null){
         res.status(404).send({ "message": "Person not found."})
     }
