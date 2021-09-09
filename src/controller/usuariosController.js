@@ -82,17 +82,32 @@ const updateName = async (req, res) =>{
 }
 
 const updateAnything = async (req, res) => {
-    const userId = req.params.id
-    const updatedUser = req.body;
-
-    Usuarios.findById(userId, updatedUser, (err, usuario) => {
-    if (err) {
-      return res.status(424).send({ message: err.message });
-    } else if (usuario) {
-      return res.status(200).send("Updated successfully!");
+    try {
+        const usuario = await Usuarios.findById({ _id: req.params.id})
+           if(usuario == null){
+           res.status(404).send({ "message": "Usuario not found!"})
+       }
+       if(req.body.nome != null){
+           usuario.nome = req.body.nome
+       }
+       if(req.body.endereço){
+           usuario.endereço = req.body.endereço
+       }
+       if(req.body.telefone){
+           usuario.telefone = req.body.telefone
+       }
+       if(req.body.pet){
+           usuario.pet = req.body.pet
+       }
+       if(req.body.pontodeColeta){
+           usuario.pontodeColeta = req.body.pontodeColeta
+       }
+       const updatedUser = await usuario.save()
+       res.status(200).send(updatedUser)
     }
-    res.status(404).send("User not found!");
-  });
+    catch (err){
+       res.status(500).send({ "message": err.message })
+    }
 }
    
 
