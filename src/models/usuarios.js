@@ -20,7 +20,6 @@ const usuariosSchema = new mongoose.Schema({
     },
     pontodeColeta: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
         ref: 'coleta'
     },
     cadastroEm: {
