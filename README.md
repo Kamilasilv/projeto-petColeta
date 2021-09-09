@@ -1,8 +1,8 @@
-On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em construção** 
+On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em construção**  :construction:
 
 <p  align="center"> Pet- Coleta <p>
 
-> Uma iniciativa inspirada e apoiada na (ONG) Anjos do Poço -Recife PE.
+<p  align="center"> Uma iniciativa inspirada e apoiada na (ONG) Anjos do Poço -Recife PE.<p>
 
   
 ## **Sumário**  
