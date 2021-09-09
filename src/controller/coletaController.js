@@ -80,7 +80,7 @@ const deleteCollectionPoint = async (req,res) => {
     }
 }
 
-const updateCollectionPoint = async (req,res) => { //completar e testar
+const updateCollectionPoint = async (req,res) => { 
   try {
      const collection = await Collect.findById({ _id: req.params.id})
         if(collection == null){
