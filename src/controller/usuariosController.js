@@ -8,9 +8,11 @@ const getAllPeople = async (req, res) => {
 
 const getAllDerby = async (req, res) => {
     const usuarios = await Usuarios.find()
-    const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == "Pet-coleta Derby")
+    const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == "Pet-coleta Derby").populate('coleta')
     res.status(200).json(filteredUser)
 }
+
+
 
 const createRegistration = async (req, res) => {
     const usuario =  new Usuarios ({
@@ -29,7 +31,7 @@ const createRegistration = async (req, res) => {
         return res.status(409).send({ error: "Person  already exists."})
     }
     try{
-        const newPeople = await usuario.populate('coleta').save()
+        const newPeople = await usuario.save()
         res.status(201).send(newPeople)
     }
     catch (err){ 
