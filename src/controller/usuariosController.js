@@ -8,8 +8,8 @@ const getAllPeople = async (req, res) => {
 
 const getAllCollect = async (req, res) => {
     const nomeColeta = req.query.nome
-    const usuarios = await Usuarios.find()
-    const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == nomeColeta).populate('coleta')
+    const usuarios = await Usuarios.find(nomeColeta).populate('coleta')
+    //const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == nomeColeta).populate('coleta')
     res.status(200).json(filteredUser)
 }
 
