@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 const Usuarios = require("../models/usuarios")
 
 const getAllPeople = async (req, res) => {
-    const usuarios = await Usuarios.find().populate("coleta")
+    const usuarios = await Usuarios.find()
     res.status(200).send(usuarios)
 }
 
 const getAllDerby = async (req, res) => {
-    const usuarios = await Usuarios.find().populate("coleta")
+    const usuarios = await Usuarios.find()
     const filteredUser = usuarios.filter( usuario => usuario.coleta.nome == "Pet-coleta Derby")
     res.status(200).json(filteredUser)
 }
@@ -29,7 +29,7 @@ const createRegistration = async (req, res) => {
         return res.status(409).send({ error: "Person  already exists."})
     }
     try{
-        const newPeople = await usuario.save()
+        const newPeople = await usuario.populate('coleta').save()
         res.status(201).send(newPeople)
     }
     catch (err){ 
