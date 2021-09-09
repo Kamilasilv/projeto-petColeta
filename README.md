@@ -109,19 +109,26 @@ Esta API está sendo executada na `porta 8080` e para que todas as rotas possam 
 
 Antes de tudo você deve ter o Visual Studio Code, após isso: 
 - Faça um fork e clone o projeto em sua máquina: 
+
 		 git clone: https://github.com/Kamilasilv/projeto-petColeta
 - Entre na pasta do projeto:
-	PROJETOFINAL
+
+		PROJETOFINAL
 - Instale as dependências: 
-	npm install 
+
+		npm install 
 - Consulte as modificações e testes através da rota principal e inclua os endpoints de requisição:
-	https://projetofinal-petcoleta.herokuapp.com/ > Através do heroku
-	http://localhost:8080/ > Localmente (npm start)
+
+		https://projetofinal-petcoleta.herokuapp.com/ > Através do heroku
+		http://localhost:8080/ > Localmente (npm start)
 	
+
 - Crie uma branch para realizar suas alterações:
-	 git checkout -b feature/nome-da-sua-branch;
+
+		 git checkout -b feature/nome-da-sua-branch;
 
  - Realize o push das suas alterações e abra uma solicitação de  pull request.
+
 
 ## **Implementações futuras**
 - Adicionar a API outro(s) banco(s) de dados com as demais ações realizadas na ONG anjos do poço. 
@@ -130,7 +137,9 @@ Antes de tudo você deve ter o Visual Studio Code, após isso:
 ## **Referências**
 
 [Anjos do Poço](http://www.anjosdopoco.org/)
+
 [Como escrever um README.md sensacional no Github](https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509#o-que-%C3%A9-o-readme)
+
 [Emojis em markdown](https://gist.github.com/tgmarinho/6cf35ac45644a0b68a45069d23c2e4b6)
 
 <hr>
