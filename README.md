@@ -1,4 +1,4 @@
-On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **Concluído** :heavy_check_mark:
+On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em construção** 
 
 <p  align="center"> Pet- Coleta <p>
 
@@ -51,7 +51,7 @@ Esta API está sendo executada na `porta 8080` e para que todas as rotas possam 
 | /coletas/todos | Lista todos os pontos de coleta existentes.|
 | /coletas/:id | Lista o ponto de coleta do id requisitado. |
 | /usuarios/todos/ | Lista todos os usuários cadastrados no projeto.
-| /usuarios/:id | Lista as informações do usuário requisitado através do id. |
+| /usuarios/coleta | Lista todos os usuários cadastrados naquele ponto de coleta. |
 
 | **_{POST}_** | Retorna |
 | ------------------- | :-------------------: |
@@ -78,11 +78,11 @@ Esta API está sendo executada na `porta 8080` e para que todas as rotas possam 
 
 - Não poderá criar um ponto de coleta com o mesmo nome, devem ser nomes diferentes pois são em locais distintos;
 
-- Para criar um ponto de coleta é necessário autenticação;
+- Somente o adm poderá criar um ponto de coleta, assim como deletar e atualizar;
 
-- Assim como para atualizar esse ponto de coleta e deletá-lo, necessita de autenticação;
+- O usuário apenas visualiza os pontos de coleta;
 
-- Para cadastrar um usuário ele deverá se vincular a um ponto de coleta existente no momento do cadastro. 
+- Para cadastrar um usuário ele deverá se vincular a um ponto de coleta existente no momento do cadastro através do id. 
 
 ## **Tecnologias e dependências**
 
@@ -107,14 +107,27 @@ Esta API está sendo executada na `porta 8080` e para que todas as rotas possam 
 
 ## **Instruções para instalação e contribuições no projeto**
 
--
--
+Antes de tudo você deve ter o Visual Studio Code, após isso: 
+- Faça um fork e clone o projeto em sua máquina: 
+		 git clone: https://github.com/Kamilasilv/projeto-petColeta
+- Entre na pasta do projeto:
+	PROJETOFINAL
+- Instale as dependências: 
+	npm install 
+- Consulte as modificações e testes através da rota principal e inclua os endpoints de requisição:
+	https://projetofinal-petcoleta.herokuapp.com/ > Através do heroku
+	http://localhost:8080/ > Localmente (npm start)
+	
+- Crie uma branch para realizar suas alterações:
+	 git checkout -b feature/nome-da-sua-branch;
+
+ - Realize o push das suas alterações e abra uma solicitação de  pull request.
 
 ## **Implementações futuras**
--
+- Adicionar a API outro(s) banco(s) de dados com as demais ações realizadas na ONG anjos do poço. 
+- Integrar com o front-end. 
 
 ## **Referências**
-
 
 [Anjos do Poço](http://www.anjosdopoco.org/)
 [Como escrever um README.md sensacional no Github](https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509#o-que-%C3%A9-o-readme)
