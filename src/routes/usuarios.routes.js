@@ -12,6 +12,6 @@ router.get("/coleta", controller.getAllCollect)
 
  router.patch("/atualizarnome/:id", controller.updateName)
 
- router.put("atualizar/:id", controller.updateAnything)
+ router.put("/atualizatudo/:id", controller.updateAnything)
 
 module.exports = router
