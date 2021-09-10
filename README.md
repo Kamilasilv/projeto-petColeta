@@ -1,8 +1,9 @@
 On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em construção**  :construction:
 
-<p  align="center"> Pet- Coleta <p>
-
-<p  align="center"> Uma iniciativa inspirada e apoiada na (ONG) Anjos do Poço -Recife PE.<p>
+<h1 align="center">
+  <img src="img/Pet-Coleta.png" alt="logo do projeto Pet- coleta" width="300">
+<p align="center"> Pet-Coleta: Uma iniciativa inspirada na (ONG) Anjos do Poço - Recife PE<p>
+</h1>
 
   
 ## **Sumário**  
@@ -67,7 +68,7 @@ Esta API está sendo executada na `porta 8080` e para que todas as rotas possam 
 | **_{PUT}_** | Retorna |
 | ------------------- | :-------------------: |
 | /coletas/atualizar/:id | Atualiza qualquer parâmetro do ponto de Coleta e retorna o item atualizado |
-| /usuarios/atualizar/:id | Atualiza qualquer parâmetro do usuário cadastrado e retorna o item atualizado |
+| /usuarios/atualizatudo/:id | Atualiza qualquer parâmetro do usuário cadastrado e retorna o item atualizado |
 
 | **_{DELETE}_** | Retorna |
 | ------------------- | :-------------------: |
