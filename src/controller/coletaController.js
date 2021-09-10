@@ -58,6 +58,18 @@ const createCollectionPoint = async (req,res) => {
 }
 
 const deleteCollectionPoint = async (req,res) => { 
+    const authHeader = req.get('authorization')
+    const token = authHeader.split(' ')[1]
+
+    if(!token){
+        return res.status(403).send({"message": "Authorization token required!"})
+    }
+    jwt.verify(token, SECRET, async (err) => {
+        if(err){
+            res.status(403).send({ "message": "Invalid token"})
+        }
+    })
+
     const idCollect = req.params.id
 
     const validCollection = await Collect.findOne({ _id:idCollect})
@@ -81,26 +93,37 @@ const deleteCollectionPoint = async (req,res) => {
 }
 
 const updateCollectionPoint = async (req,res) => { 
-  try {
-     const collection = await Collect.findById({ _id: req.params.id})
-        if(collection == null){
-        res.status(404).send({ "message": "Collection not found!"})
+    const authHeader = req.get('authorization')
+    const token = authHeader.split(' ')[1]
+    if(!token){
+        return res.status(403).send({ "message": "Authorization token required!"})
     }
-    if(req.body.nome != null){
-        collection.nome = req.body.nome
+    jwt.verify(token, SECRET, async (err) => {
+        if(err){
+            res.status(403).send({ "message": "Invalid token"})
+        }
+    })
+
+    try {
+        const collection = await Collect.findById({ _id: req.params.id})
+            if(collection == null){
+            res.status(404).send({ "message": "Collection not found!"})
+        }
+        if(req.body.nome != null){
+            collection.nome = req.body.nome
+        }
+        if(req.body.local){
+            collection.local = req.body.local
+        }
+        if(req.body.horarioFuncionamento){
+            collection.horarioFuncionamento = req.body.horarioFuncionamento
+        }
+        const updatedCollection = await collection.save()
+        res.status(200).send(updatedCollection)
     }
-    if(req.body.local){
-        collection.local = req.body.local
+    catch (err){
+        res.status(500).send({ "message": err.message })
     }
-    if(req.body.horarioFuncionamento){
-        collection.horarioFuncionamento = req.body.horarioFuncionamento
-    }
-    const updatedCollection = await collection.save()
-    res.status(200).send(updatedCollection)
- }
- catch (err){
-    res.status(500).send({ "message": err.message })
- }
 }
 
 module.exports = { 
