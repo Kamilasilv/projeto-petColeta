@@ -1,7 +1,7 @@
 On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em construção**  :construction:
 
 <h1 align="center">
-  <img src="img/Pet-Coleta.png" alt="logo do projeto Pet- coleta" width="300">
+  <img src="img/Pet-Coleta.png" alt="logo do projeto Pet- coleta" width="500">
 <p align="center"> Pet-Coleta: Uma iniciativa inspirada na (ONG) Anjos do Poço - Recife PE<p>
 </h1>
 
