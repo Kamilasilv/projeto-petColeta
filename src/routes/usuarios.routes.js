@@ -8,7 +8,7 @@ router.get("/coleta", controller.getAllCollect)
 
  router.post("/cadastroColeta", controller.createRegistration)
 
- router.delete("/deletar/:id", controller.deletePeople)
+ router.delete("/delete/:id", controller.deletePeople)
 
  router.patch("/atualizarnome/:id", controller.updateName)
 
