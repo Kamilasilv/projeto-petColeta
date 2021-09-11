@@ -1,0 +1,476 @@
+{
+	"id": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+	"name": "Pet coleta",
+	"description": "Documentação - API Pet-Coleta  Back-end\n\nApresentação do Projeto\nEndpoints referentes a API desenvolvida para o projeto final da turma de Back-end {reprograma}\n\nAutenticação\nNecessário criar Adm e realizar o Login para adquirir o token de acesso a criar um ponto de Coleta, deletá-lo, assim como atualizar qualquer dos seus dados.(PUT)\n\nERROR CODES\n\n200 – OK\n\nRequisição bem-sucedida. Irá retornar o resultado da função associada à requisição.\n\n201– Created\n\nRequisição de POST bem-sucedida. Irá retornar o item criado.\n\n\n403 – Forbidden\n\nSem autorização suficiente para acessar o recurso desejado. Utilizado quando o usuário tenta alterar ou deletar um item não permitido.\n\n404 – Not Found\n\nRequisição não encontrada.\n\n500 - Internal Server Error\nErro no servidor. \n\n",
+	"order": [
+		"22113a08-e819-f7a3-b5ad-d19c836c16e7",
+		"a2d4ff43-1982-631d-aae8-4c1b062ec3e1",
+		"9732324d-fa53-4d68-c19f-abbc61fca350",
+		"d2a543ed-afd7-541b-e642-959187de60be",
+		"6eef2a3d-cdb5-2cc9-6a13-c8bf4a1c01ac",
+		"42718e34-3233-eb61-d536-acb68375ebd8",
+		"ae842063-52b1-fe35-c8f7-e324961c5510",
+		"45eb4a98-5610-969d-13e7-568887438a20",
+		"cdfec1db-7b5c-a929-aa82-d35d562c6fa8",
+		"2b990a6a-60ed-b479-1525-c4046028bf84",
+		"0e9ba222-9a23-8955-6b9e-2359aca420d5",
+		"672d122a-5a8c-f48b-219f-581acac10db3",
+		"4796c2b5-e631-f16f-c8b3-5f2d76d414f9",
+		"0666bff5-e1a1-8ef1-1263-6e4f0bc8c5cb"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1630546540638,
+	"owner": "17465837",
+	"public": false,
+	"requests": [
+		{
+			"id": "0666bff5-e1a1-8ef1-1263-6e4f0bc8c5cb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/usuarios/atualizarnome/:id",
+			"queryParams": [],
+			"pathVariables": {
+				"id": ""
+			},
+			"pathVariableData": [
+				{
+					"key": "id",
+					"value": ""
+				}
+			],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"data": [],
+			"dataMode": "raw",
+			"name": "PATCH Atualizar nome Usuário",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1631154385936,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"nome\": \"Helena nome updated part2\"\n}"
+		},
+		{
+			"id": "0e9ba222-9a23-8955-6b9e-2359aca420d5",
+			"headers": "",
+			"headerData": [],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/usuarios/delete/:id",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {
+				"id": ""
+			},
+			"pathVariableData": [
+				{
+					"key": "id",
+					"value": ""
+				}
+			],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631251012087,
+			"name": "Delete Usuário",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": []
+		},
+		{
+			"id": "22113a08-e819-f7a3-b5ad-d19c836c16e7",
+			"headers": "",
+			"headerData": [],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"data": null,
+			"dataMode": "params",
+			"name": "Apresentação do projeto",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1631157058305,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "2b990a6a-60ed-b479-1525-c4046028bf84",
+			"headers": "Authorization: Bearer \nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/coletas/delete/:id",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {
+				"id": ""
+			},
+			"pathVariableData": [
+				{
+					"key": "id",
+					"value": ""
+				}
+			],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631299598514,
+			"name": "Delete Coleta",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "42718e34-3233-eb61-d536-acb68375ebd8",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer \n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/coletas/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631300882641,
+			"name": "Create Coleta",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": [],
+			"rawModeData": "{\n\t\"nome\": \" \" ,\n\t\"local\": \" \",\n\t\"horarioFuncionamento\": \" \" \n}"
+		},
+		{
+			"id": "45eb4a98-5610-969d-13e7-568887438a20",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/adm/criar",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Create ADM",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1631130508269,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"nome\": \"Kamila Silva\",\n\t\"email\": \"kamilasilva@email.com\",\n\t\"senha\": \"milasilva\"\n}"
+		},
+		{
+			"id": "4796c2b5-e631-f16f-c8b3-5f2d76d414f9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/usuarios/atualizatudo/:id",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {
+				"id": ""
+			},
+			"pathVariableData": [
+				{
+					"key": "id",
+					"value": ""
+				}
+			],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631302476238,
+			"name": "PUT Atualizar qualquer dado Usuário",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": [],
+			"rawModeData": "{\n\t\"endereço\": \"Rua santa joaoa, n 84- Água Fria\"\n}"
+		},
+		{
+			"id": "672d122a-5a8c-f48b-219f-581acac10db3",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/coletas/atualizar/:id",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {
+				"id": ""
+			},
+			"pathVariableData": [
+				{
+					"key": "id",
+					"value": ""
+				}
+			],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631302356397,
+			"name": "PUT Atualizar qualquer dado Coleta ",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": [],
+			"rawModeData": "{\n\t\"nome\": \"Pet-coleta Praça do Diário\"\n}"
+		},
+		{
+			"id": "6eef2a3d-cdb5-2cc9-6a13-c8bf4a1c01ac",
+			"headers": "",
+			"headerData": [],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/usuarios/todos",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"data": null,
+			"dataMode": "params",
+			"name": "Usuários",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1630973523033,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9732324d-fa53-4d68-c19f-abbc61fca350",
+			"headers": "",
+			"headerData": [],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/coletas/:id",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {
+				"id": ""
+			},
+			"pathVariableData": [
+				{
+					"key": "id",
+					"value": ""
+				}
+			],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631154146286,
+			"name": "Coletas por ID",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": []
+		},
+		{
+			"id": "a2d4ff43-1982-631d-aae8-4c1b062ec3e1",
+			"headers": "",
+			"headerData": [],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/coletas/todos",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"data": null,
+			"dataMode": "params",
+			"name": "Coletas",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1630971116384,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "ae842063-52b1-fe35-c8f7-e324961c5510",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/usuarios/cadastroColeta",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631153683501,
+			"name": "Create Usuário",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": [],
+			"rawModeData": "{\n\t\"nome\": \"Helena Maria teste\",\n\t\"endereço\": \"Rua santa joaoa, n 84- Água Fria teste\", \n\t\"telefone\": \"8198817-1501teste\",\n\t\"pet\": \"cachorro\",\n\t\"pontodeColeta\": \"6136ac099eacaab3d863f0c7\"\n}"
+		},
+		{
+			"id": "cdfec1db-7b5c-a929-aa82-d35d562c6fa8",
+			"headers": "Content-Type: application/json\n//Authorization: Bearer $2b$10$48YDvyrEaX4qc9vKlju5teSQIRDL803pNZg0umhsDbwUsS3n9MIem\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer $2b$10$48YDvyrEaX4qc9vKlju5teSQIRDL803pNZg0umhsDbwUsS3n9MIem",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/adm/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1631299398123,
+			"name": "LOGIN ADM",
+			"description": "",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"kamilasilva@email.com\",\n\t\"senha\": \"milasilva\"\n}"
+		},
+		{
+			"id": "d2a543ed-afd7-541b-e642-959187de60be",
+			"headers": "",
+			"headerData": [],
+			"url": "https://projetofinal-petcoleta.herokuapp.com/usuarios/coleta",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0790d0f7-ddba-d171-f07a-411e0ed2a1ff",
+			"data": null,
+			"dataMode": "params",
+			"name": "Coletas populate",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1631229851554,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
