@@ -1,8 +1,8 @@
-On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em construção**  :construction:
+On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **concluído**  :white_check_mark:
 
 <h1 align="center">
   <img src="img/Pet-Coleta.png" alt="logo do projeto Pet- coleta" width="500">
-<p align="center"> Pet-Coleta: Uma iniciativa inspirada na (ONG) Anjos do Poço <p>
+<p align="center">Pet-Coleta: Uma iniciativa inspirada na (ONG) Anjos do Poço<p>
 </h1>
 
   
@@ -20,7 +20,7 @@ On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em constr
 
 ## **Apresentação**
 
-O "Pet- coleta"  :smiley_cat::dog: visa desenvolvimento sustentável, economia e praticidade. É o meu projeto de conclusão do bootcamp de Back-end da [{reprograma}](https://reprograma.com.br/). Essa  API  tem por objetivo agregar no organizacional de uma ONG, chamada Anjos do Poço. Para que assim, possa ampliar sua rede de apoio, entre amigos, interessados e solidários. A nossa principal bandeira é a atuação na DEFESA DOS ANIMAIS E MEIO AMBIENTE. 
+O "Pet- coleta"  :smiley_cat::dog: :recycle: visa desenvolvimento sustentável, economia e praticidade. É o meu projeto de conclusão do bootcamp de Back-end da [{reprograma}](https://reprograma.com.br/). Essa  API  tem por objetivo agregar no organizacional de uma ONG, chamada Anjos do Poço. Para que assim, possa ampliar sua rede de apoio, entre amigos, interessados e solidários. A nossa principal bandeira é a atuação na DEFESA DOS ANIMAIS E MEIO AMBIENTE. 
 
 
 ## **Qual o objetivo?**
@@ -131,9 +131,17 @@ Antes de tudo você deve ter o Visual Studio Code, após isso:
  - Realize o push das suas alterações e abra uma solicitação de  pull request.
 
 ### **Documentação API no Postman**
+---
+
 [API Pet-Coleta](https://documenter.getpostman.com/view/17465837/U16kqQPo)
 
-### **Demonstração da aplicação: 
+
+### **Demonstração:**
+
+---
+<h1 align="left">
+  <img src="img/gif-petcoleta.gif.gif" alt="gif do projeto Pet- coleta" width="500">
+  </h1>
 
 
 ## **Implementações futuras**
@@ -150,6 +158,11 @@ Antes de tudo você deve ter o Visual Studio Code, após isso:
 
 <hr>
 
+### **Agradecimentos**
+
+Agradeço por ter feito parte dessa grande rede de mulheres em todas as suas diversidades e potencialmente incríveis que formam a {reprograma}. Grande passo na minha trilha na tecnologia. Feliz por ter conquistado aprendizado, conhecido pessoas e me ter dado a oportunidade de fazer parte disso. 
+
+---
 Criado  por **Kamila Silva** e o apoio de todes que fazem a reprograma acontecer. :purple_heart:
 
 #### Entre em contato comigo por:
