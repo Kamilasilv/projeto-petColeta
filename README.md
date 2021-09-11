@@ -2,7 +2,7 @@ On12- Back-end{reprograma} :purple_heart: Projeto final 🚀 Status: **em constr
 
 <h1 align="center">
   <img src="img/Pet-Coleta.png" alt="logo do projeto Pet- coleta" width="500">
-<p align="center"> Pet-Coleta: Uma iniciativa inspirada na (ONG) Anjos do Poço - Recife PE<p>
+<p align="center"> Pet-Coleta: Uma iniciativa inspirada na (ONG) Anjos do Poço <p>
 </h1>
 
   
@@ -73,13 +73,13 @@ Esta API está sendo executada na `porta 8080` e para que todas as rotas possam 
 | **_{DELETE}_** | Retorna |
 | ------------------- | :-------------------: |
 | /coletas/delete/:id | Deletar um ponto de coleta (necessita autenticação) |
-| /usuarios/deletar/:id | Deleta um usuário cadastrado através do seu id |
+| /usuarios/delete/:id | Deleta um usuário cadastrado através do seu id |
 
 ## Demandas de negócio
 
 - Não poderá criar um ponto de coleta com o mesmo nome, devem ser nomes diferentes pois são em locais distintos;
 
-- Somente o adm poderá criar um ponto de coleta, assim como deletar e atualizar;
+- Somente o adm poderá criar um ponto de coleta, assim como deletar e atualizá-lo;
 
 - O usuário apenas visualiza os pontos de coleta;
 
@@ -130,6 +130,11 @@ Antes de tudo você deve ter o Visual Studio Code, após isso:
 
  - Realize o push das suas alterações e abra uma solicitação de  pull request.
 
+### **Documentação API no Postman**
+[API Pet-Coleta](https://documenter.getpostman.com/view/17465837/U16kqQPo)
+
+### **Demonstração da aplicação: 
+
 
 ## **Implementações futuras**
 - Adicionar a API outro(s) banco(s) de dados com as demais ações realizadas na ONG anjos do poço. 
@@ -145,10 +150,10 @@ Antes de tudo você deve ter o Visual Studio Code, após isso:
 
 <hr>
 
-  
-
 Criado  por **Kamila Silva** e o apoio de todes que fazem a reprograma acontecer. :purple_heart:
+
 #### Entre em contato comigo por:
+
 [![Linkedin Badge](https://img.shields.io/badge/-Kamila%20Silva-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/kamila-silva/) 
-[![Gmail Badge](https://img.shields.io/badge/-kamillasilva140@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:olga.mahin@gmail.com)](mailto:kamillasilva140@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-kamillasilva140@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:kamillasilva140@gmail.com)](mailto:kamillasilva140@gmail.com)
 
